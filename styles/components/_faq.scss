@@ -1,0 +1,51 @@
+@import "../components/mixins";
+.faq__section {
+  @include display;
+    align-items: center;
+  }
+  .faq {
+    @include display;
+    max-width: 50rem;
+    margin-top: calc(var(--default-padding) / 2);
+    &__question {
+      border-top: 1px solid var(--color-grayish-blue);
+      position: relative;
+      padding: var(--default-padding);
+      &:last-child {
+        border-bottom: 1px solid var(--color-grayish-blue);
+      }
+    }
+    &__label {
+      cursor: pointer;
+      font-weight: 500;
+      display: block;
+    }
+    &__text {
+      font-weight: 400;
+      font-size: var(--font-size-14);
+      opacity: 0;
+      max-height: 0.1rem;
+      line-height: 1.5;
+      transition: all var(--transition-timing);
+      overflow: hidden;
+    }
+    &__arrow {
+      position: absolute;
+      right: 0;
+      top: calc(var(--default-padding) + 0.6rem);
+      width: 1.3rem;
+      max-width: 100%;
+      transition: transform var(--transition-timing) ease-in-out;
+    }
+    &__checkbox {
+      display: none;
+      &:checked ~ .faq__text {
+        max-height: 30rem;
+        padding-top: var(--default-padding);
+        opacity: 1;
+      }
+      &:checked ~ .faq__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }

@@ -1,0 +1,43 @@
+@import "../components/mixins";
+.cards {
+  margin-top: calc(var(--default-padding) * 2);
+  @include grid(4rem, 3, 1fr);
+  max-width: 100%;
+
+  &__card {
+    padding: calc(var(--default-padding) * 2) var(--default-padding)
+      var(--default-padding);
+    @include display;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.4rem 0.8rem 0.2rem;
+    width: 25rem;
+    height: 26rem;
+  }
+  &__image {
+    width: 6rem;
+    max-width: 100%;
+    margin-bottom: var(--default-padding);
+  }
+  &__dots {
+    max-width: 100%;
+    position: relative;
+    top: -2.5rem;
+  }
+  &__link {
+    margin-top: auto;
+    align-self: stretch;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../assets/images/bg-dots.svg) repeat-x;
+      background-size: contain;
+      height: 0.3rem;
+      left: calc(var(--default-padding) * -1);
+      right: calc(var(--default-padding) * -1);
+      top: calc(var(--default-padding) * -1);
+    }
+  }
+}

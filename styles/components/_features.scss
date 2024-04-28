@@ -1,0 +1,14 @@
+@import "../components/mixins";
+.features {
+    &__section {
+      @include display;
+      gap: calc(var(--default-padding) * 4);
+    }
+    &__image {
+      max-width: 100%;
+    }
+    &__text {
+      @include display;
+      justify-content: center;
+    }
+  }

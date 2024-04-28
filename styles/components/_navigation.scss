@@ -1,0 +1,17 @@
+@import "../components/mixins";
+.navigation {
+    margin-left: auto;
+    &__list {
+      @include display(flex, row);
+      gap: 2rem;
+    }
+    &__item {
+      font-size: var(--font-size-16);
+      color: var(--color-very-dark-blue);
+      font-weight: 500;
+    }
+    &__item:hover {
+      color: var(--color-soft-red);
+      transition: var(--transition-timing) ease-in-out;
+    }
+  }

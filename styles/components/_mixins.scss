@@ -1,0 +1,9 @@
+@mixin display($display: flex, $flex-direction: column) {
+  display: $display;
+  flex-direction: $flex-direction;
+}
+@mixin grid($column-gap: 0, $template-column: 2, $column-size: 1fr) {
+  display: grid;
+  grid-template-columns: repeat($template-column, $column-size);
+  column-gap: $column-gap;
+}
