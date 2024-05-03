@@ -1,0 +1,24 @@
+{
+  "name": "quran-tab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "D": "^1.0.0",
+    "esbuild": "^0.20.2",
+    "nanoid": "^3.3.7",
+    "picocolors": "^1.0.0",
+    "postcss": "^8.4.38",
+    "rollup": "^4.17.2",
+    "sass": "^1.76.0",
+    "source-map-js": "^1.2.0",
+    "vite": "^5.2.10"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "author": "",
+  "license": "ISC"
+}
