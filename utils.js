@@ -11,6 +11,7 @@ export const observeElements = (sectionELements) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view");
+        console.log("j");
       } else {
         entry.target.classList.remove("in-view");
       }
@@ -43,6 +44,7 @@ export const observeText = (articles) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view-text");
+      
       } else {
         entry.target.classList.remove("in-view-text");
       }
@@ -53,3 +55,5 @@ export const observeText = (articles) => {
     observer.observe(element);
   });
 };
+
+

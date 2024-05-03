@@ -9,6 +9,7 @@ labelElements.forEach(clickLabelEvent);
 const sectionElements = document.querySelectorAll("section");
 const images = document.querySelectorAll("img");
 const articles = document.querySelectorAll("p");
+
 observeElements(sectionElements);
 observeImages(images);
 observeText(articles);

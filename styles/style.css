@@ -135,39 +135,35 @@ body {
   align-items: center;
 }
 
-section {
-  opacity: 0;
-  transform: translateY(1rem);
-  transition: 0.8s;
+@media (min-width: 1200px) {
+  section {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: 0.8s;
+  }
+  .in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  img {
+    opacity: 0;
+    transform: translateX(-15rem);
+    transition: 0.8s;
+  }
+  .in-view-image {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  p {
+    opacity: 0;
+    transform: translateX(15rem);
+    transition: 0.8s;
+  }
+  .in-view-text {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
-.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-img {
-  opacity: 0;
-  transform: translateX(-20rem);
-  transition: 0.8s;
-}
-
-.in-view-image {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-p {
-  opacity: 0;
-  transform: translateX(20rem);
-  transition: 0.8s;
-}
-
-.in-view-text {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 .header {
   display: flex;
   flex-direction: row;
